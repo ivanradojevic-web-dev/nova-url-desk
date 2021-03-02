@@ -2,6 +2,7 @@
 
 use Ivanradojevic\Urldesk\Http\Resources\RedirectResource;
 use Ivanradojevic\Urldesk\Http\Requests\SaveRedirectRequest;
+use Ivanradojevic\Urldesk\Http\Requests\UpdateRedirectRequest;
 use Ivanradojevic\Urldesk\Models\Redirect;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -35,7 +36,7 @@ Route::get('/redirects/{id}', function (Request $request, $id) {
 });
 
 //update
-Route::put('/redirects/{id}', function (SaveRedirectRequest $request, $id) {
+Route::put('/redirects/{id}', function (UpdateRedirectRequest $request, $id) {
     $redirect = Redirect::find($id);
 
     $redirect->update($request->validated());

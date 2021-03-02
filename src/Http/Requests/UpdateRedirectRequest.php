@@ -2,9 +2,12 @@
 
 namespace Ivanradojevic\Urldesk\Http\Requests;
 
+//use Illuminate\Http\Request;
 use Illuminate\Foundation\Http\FormRequest;
+use Ivanradojevic\Urldesk\Models\Redirect;
+use Illuminate\Validation\Rule;
 
-class SaveRedirectRequest extends FormRequest
+class UpdateRedirectRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,16 +26,14 @@ class SaveRedirectRequest extends FormRequest
      */
     public function rules()
     {
-        // $id = $this->request->get('id');
-
-        // if ($id) {
-        //     $redirect = Redirect::find($id);
-        // }
-
+        $id = $this->route('id');
+        $redirect = Redirect::find($id);
+        
         return [
-            'redirect_from' => 'required|max:255|unique:redirects',
-            'redirect_to' => 'required|unique:redirects',
+            'redirect_from' => ['required','max:255',Rule::unique('redirects')->ignore($redirect)],
+            'redirect_to' => ['required',Rule::unique('redirects')->ignore($redirect)],
             'status_code' => 'required',
         ];
+
     }
 }

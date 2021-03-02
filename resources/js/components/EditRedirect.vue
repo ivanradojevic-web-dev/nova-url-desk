@@ -134,7 +134,7 @@
                 .put('/nova-vendor/urldesk/redirects/' + this.id, {
                     redirect_from: this.redirect_from,
                     redirect_to: this.redirect_to,
-                    status_code: this.status_code
+                    status_code: this.status_code,
                 })
                 .then((response) => {
                     this.$emit("editRedirectEvent")
