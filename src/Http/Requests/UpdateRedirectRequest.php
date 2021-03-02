@@ -2,7 +2,6 @@
 
 namespace Ivanradojevic\Urldesk\Http\Requests;
 
-//use Illuminate\Http\Request;
 use Illuminate\Foundation\Http\FormRequest;
 use Ivanradojevic\Urldesk\Models\Redirect;
 use Illuminate\Validation\Rule;

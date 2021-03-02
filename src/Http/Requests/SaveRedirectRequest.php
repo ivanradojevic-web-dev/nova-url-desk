@@ -23,12 +23,6 @@ class SaveRedirectRequest extends FormRequest
      */
     public function rules()
     {
-        // $id = $this->request->get('id');
-
-        // if ($id) {
-        //     $redirect = Redirect::find($id);
-        // }
-
         return [
             'redirect_from' => 'required|max:255|unique:redirects',
             'redirect_to' => 'required|unique:redirects',
