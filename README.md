@@ -1,6 +1,6 @@
 ## Installation
 ```
-composer require ivanradojevic/urldes
+composer require ivanradojevic/urldesk
 ```
 ## Usage
 
