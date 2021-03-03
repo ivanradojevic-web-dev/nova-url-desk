@@ -7,11 +7,11 @@ Migrate redirects table:
 NovaServiceProvider:
 - use Ivanradojevic\Urldesk\Urldesk;
 public function tools()
-{
-return [
-new Urldesk,
-];
-}
+- 	{
+		return [
+			new Urldesk,
+		];
+	}
     	
 For optimal user experience use Nova Tailwind package:
 - composer require optimistdigital/nova-tailwind

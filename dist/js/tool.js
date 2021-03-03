@@ -2430,7 +2430,7 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _vm.redirects.length
+    _vm.meta.total > 10
       ? _c(
           "div",
           [

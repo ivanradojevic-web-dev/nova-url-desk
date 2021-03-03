@@ -98,7 +98,7 @@
             </tbody>
         </table>
 
-        <div v-if="redirects.length">
+        <div v-if="meta.total > 10">
             <pagination-component :meta="meta" v-on:pagination:switched="getRedirects"></pagination-component>
         </div>
 
