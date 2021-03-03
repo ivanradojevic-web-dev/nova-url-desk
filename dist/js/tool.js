@@ -681,12 +681,12 @@ var render = function() {
               : _vm._e(),
             _vm._v(" "),
             _vm._l(_vm.pages, function(page) {
-              return _c("li", [
+              return _c("div", [
                 _c(
                   "a",
                   {
                     staticClass:
-                      "border-transparent text-gray-500  pt-4  px-4 inline-flex items-center text-sm font-medium",
+                      "no-underline border-transparent text-gray-500  pt-4  px-4 inline-flex items-center text-sm font-medium",
                     class: {
                       "text-indigo-600": _vm.meta.current_page === page
                     },
@@ -1003,7 +1003,7 @@ var render = function() {
       "button",
       {
         staticClass:
-          "w-32 bg-blue-400 hover:bg-blue-500 tracking-wide rounded shadow py-1 px-3 text-white font-bold",
+          "w-32 h-8 bg-blue-400 hover:bg-blue-500 tracking-wide rounded shadow py-1 px-3 text-white font-bold",
         on: {
           click: function($event) {
             _vm.isOpen = true
@@ -1223,14 +1223,14 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
+                      "space-y-3 sm:space-y-0 items-center bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
                   },
                   [
                     _c(
                       "button",
                       {
                         staticClass:
-                          "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-400 text-base font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-200 sm:ml-3 sm:w-auto sm:text-sm",
+                          "w-full sm:w-24 inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-400 text-base font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-200 sm:ml-3 sm:w-auto sm:text-sm",
                         attrs: { type: "submit" },
                         on: { click: _vm.createLinks }
                       },
@@ -1245,7 +1245,7 @@ var render = function() {
                       "button",
                       {
                         staticClass:
-                          "mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm",
+                          "mr-4 sm:w-24 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm",
                         attrs: { type: "button" },
                         on: {
                           click: function($event) {
@@ -1729,14 +1729,14 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
+                      "space-y-3 sm:space-y-0 bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
                   },
                   [
                     _c(
                       "button",
                       {
                         staticClass:
-                          "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-400 text-base font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-200 sm:ml-3 sm:w-auto sm:text-sm",
+                          "w-full sm:w-24 inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-400 text-base font-medium text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-200 sm:ml-3 sm:w-auto sm:text-sm",
                         attrs: { type: "submit" },
                         on: { click: _vm.editRedirect }
                       },
@@ -1751,7 +1751,7 @@ var render = function() {
                       "button",
                       {
                         staticClass:
-                          "mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm",
+                          "mr-4 sm:w-24 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm",
                         attrs: { type: "button" },
                         on: {
                           click: function($event) {
@@ -2059,14 +2059,14 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
+                      "space-y-3 sm:space-y-0 bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
                   },
                   [
                     _c(
                       "button",
                       {
                         staticClass:
-                          "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-400 text-base font-medium text-white hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-200 sm:ml-3 sm:w-auto sm:text-sm",
+                          "w-full sm:w-24 inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-400 text-base font-medium text-white hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-200 sm:ml-3 sm:w-auto sm:text-sm",
                         attrs: { type: "submit" },
                         on: { click: _vm.deleteRedirect }
                       },
@@ -2081,7 +2081,7 @@ var render = function() {
                       "button",
                       {
                         staticClass:
-                          "mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm",
+                          "mr-4 sm:w-24 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm",
                         attrs: { type: "button" },
                         on: {
                           click: function($event) {
@@ -2235,7 +2235,7 @@ var render = function() {
                             "div",
                             {
                               staticClass:
-                                "flex items center space-x-4 select-all"
+                                "flex items-center space-x-4 select-all"
                             },
                             [
                               _c("span", { staticClass: "cursor-pointer" }, [
@@ -2321,7 +2321,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "td",
-                        { staticClass: "w-1/12 px-6 py-3 whitespace-nowrap" },
+                        { staticClass: "w-212 px-6 py-3 whitespace-nowrap" },
                         [
                           _c(
                             "div",
@@ -2344,14 +2344,14 @@ var render = function() {
                         "td",
                         {
                           staticClass:
-                            "w-2/12 px-6 py-3 whitespace-nowrap text-sm"
+                            "w-1/12 px-6 py-3 whitespace-nowrap text-sm"
                         },
                         [
                           _c(
                             "div",
                             {
                               staticClass:
-                                "flex items-center space-x-2 text-sm text-gray-500"
+                                "flex items-center justify-center space-x-2 text-sm text-gray-500"
                             },
                             [
                               _c(

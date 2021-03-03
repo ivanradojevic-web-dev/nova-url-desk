@@ -18,11 +18,11 @@
                 </li>
             </template>
            
-            <li v-for="page in pages">
-                <a @click.prevent="switched(page)" href="#" :class="{'text-indigo-600' : meta.current_page === page}" class="border-transparent text-gray-500  pt-4  px-4 inline-flex items-center text-sm font-medium">
+            <div v-for="page in pages">
+                <a @click.prevent="switched(page)" href="#" :class="{'text-indigo-600' : meta.current_page === page}" class="no-underline border-transparent text-gray-500  pt-4  px-4 inline-flex items-center text-sm font-medium">
                     {{page}}
                 </a>
-            </li>
+            </div>
             
             <template v-if="section < sections"> 
                  <li>
