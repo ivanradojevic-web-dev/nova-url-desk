@@ -1,18 +1,26 @@
-Installation:
-- composer require ivanradojevic/urldesk
+## Installation
+```
+composer require ivanradojevic/urldes
+```
+## Usage
 
-Migrate redirects table:
-- php artisan migrate
+```
+php artisan migrate
 
-NovaServiceProvider:
-- use Ivanradojevic\Urldesk\Urldesk;
+//NovaServiceProvider
+use Ivanradojevic\Urldesk\Urldesk;
+
 public function tools()
-- 	{
-		return [
-			new Urldesk,
-		];
-	}
-    	
-For optimal user experience use Nova Tailwind package:
-- composer require optimistdigital/nova-tailwind
+{
+	return [
+		new Urldesk,
+	];	
+}
+
+//Insert all Tailwind.css classes
+composer require optimistdigital/nova-tailwind
+```
+
+
+
 
