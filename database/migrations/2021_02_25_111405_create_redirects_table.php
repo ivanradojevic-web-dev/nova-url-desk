@@ -16,7 +16,7 @@ class CreateRedirectsTable extends Migration
         Schema::create('redirects', function (Blueprint $table) {
             $table->id();
             $table->string('redirect_from')->unique();
-            $table->longText('redirect_to')->unique();
+            $table->longText('redirect_to');
             $table->enum('status_code', ['301', '302', '307'])->default('307');
             $table->timestamps();
         });
