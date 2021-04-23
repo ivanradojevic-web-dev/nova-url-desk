@@ -1,27 +1,27 @@
 <template>
     <div class="flex justify-center">
 
-        <ul class="flex space-x-2">
-            <li :class="{ 'text-gray-400' : meta.current_page === 1}">
+        <div class="flex space-x-2">
+            <span :class="{ 'text-gray-400' : meta.current_page === 1}">
                 <a href="#" @click.prevent="switched(meta.current_page - 1)" >&lt;</a>
-            </li>
+            </span>
             <template v-if="section > 1">
-                <li>
+                <span>
                     <a href="#" @click.prevent="switched(1)">1</a>
-                </li>
+                </span>
             </template>
-            <li v-for="page in pages" :class="{ 'text-blue-500' : meta.current_page === page}">
+            <span v-for="page in pages" :class="{ 'text-blue-500' : meta.current_page === page}">
                 <a href="#" @click.prevent="switched(page)" >{{page}}</a>
-            </li>
+            </span>
             <template v-if="section < sections">
-                <li>
+                <span>
                     <a href="#" @click.prevent="switched(meta.last_page)">{{meta.last_page}}</a>
-                </li>
+                </span>
             </template>
-            <li :class="{ 'text-gray-400' : meta.current_page === meta.current_page}">
+            <span :class="{ 'text-gray-400' : meta.current_page === meta.current_page}">
                 <a href="#" @click.prevent="switched(meta.current_page + 1)" >&gt;</a>
-            </li>   
-        </ul>
+            </span>   
+        </div>
 
 
     </div>
@@ -82,3 +82,4 @@
 
     };                           
 </script>
+

@@ -584,28 +584,32 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "flex justify-center" }, [
     _c(
-      "ul",
+      "div",
       { staticClass: "flex space-x-2" },
       [
-        _c("li", { class: { "text-gray-400": _vm.meta.current_page === 1 } }, [
-          _c(
-            "a",
-            {
-              attrs: { href: "#" },
-              on: {
-                click: function($event) {
-                  $event.preventDefault()
-                  return _vm.switched(_vm.meta.current_page - 1)
+        _c(
+          "span",
+          { class: { "text-gray-400": _vm.meta.current_page === 1 } },
+          [
+            _c(
+              "a",
+              {
+                attrs: { href: "#" },
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    return _vm.switched(_vm.meta.current_page - 1)
+                  }
                 }
-              }
-            },
-            [_vm._v("<")]
-          )
-        ]),
+              },
+              [_vm._v("<")]
+            )
+          ]
+        ),
         _vm._v(" "),
         _vm.section > 1
           ? [
-              _c("li", [
+              _c("span", [
                 _c(
                   "a",
                   {
@@ -625,7 +629,7 @@ var render = function() {
         _vm._v(" "),
         _vm._l(_vm.pages, function(page) {
           return _c(
-            "li",
+            "span",
             { class: { "text-blue-500": _vm.meta.current_page === page } },
             [
               _c(
@@ -647,7 +651,7 @@ var render = function() {
         _vm._v(" "),
         _vm.section < _vm.sections
           ? [
-              _c("li", [
+              _c("span", [
                 _c(
                   "a",
                   {
@@ -666,7 +670,7 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         _c(
-          "li",
+          "span",
           {
             class: {
               "text-gray-400": _vm.meta.current_page === _vm.meta.current_page
