@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center">
 
-        <ul class="flex space-x-2">
+        <ul class="flex space-x-2 no-bullets">
             <li :class="{ 'text-gray-400' : meta.current_page === 1}">
                 <a href="#" @click.prevent="switched(meta.current_page - 1)" >&lt;</a>
             </li>
@@ -82,3 +82,11 @@
 
     };                           
 </script>
+
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
