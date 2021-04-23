@@ -25,7 +25,7 @@ class SaveRedirectRequest extends FormRequest
     {
         return [
             'redirect_from' => 'required|max:255|unique:redirects',
-            'redirect_to' => 'required|unique:redirects',
+            'redirect_to' => 'required',
             'status_code' => 'required',
         ];
     }

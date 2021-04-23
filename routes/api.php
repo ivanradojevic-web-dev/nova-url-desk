@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 //index
 Route::get('/redirects', function (Request $request) {
-    $redirects = Redirect::table($request->search)->paginate(10);
+    $redirects = Redirect::table($request->search)->paginate(25);
 
     return RedirectResource::collection($redirects);
 });

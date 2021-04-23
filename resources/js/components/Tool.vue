@@ -17,7 +17,7 @@
                     v-model="query.search"
                     id="search"
                     autocomplete="off" 
-                    class="block w-full pl-10 pr-3 py-2 border-2 border-gray-300 rounded-xl leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-blue-400 focus:shadow-outline-blue sm:text-sm transition duration-150 ease-in-out"
+                    class="block w-full pl-10 pr-3 py-2 border-2 border-gray-300 rounded leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-blue-400 focus:shadow-outline-blue sm:text-sm transition duration-150 ease-in-out"
                     placeholder="Search" type="search">        
             </div>
 
@@ -98,7 +98,7 @@
             </tbody>
         </table>
 
-        <div v-if="meta.total > 10">
+        <div v-if="meta.total > 25">
             <pagination-component :meta="meta" v-on:pagination:switched="getRedirects"></pagination-component>
         </div>
 

@@ -30,7 +30,7 @@ class UpdateRedirectRequest extends FormRequest
         
         return [
             'redirect_from' => ['required','max:255',Rule::unique('redirects')->ignore($redirect)],
-            'redirect_to' => ['required',Rule::unique('redirects')->ignore($redirect)],
+            'redirect_to' => 'required',
             'status_code' => 'required',
         ];
 

@@ -529,26 +529,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
@@ -556,7 +536,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     data: function data() {
         return {
-            numbersPerSection: 12
+            numbersPerSection: 10
         };
     },
 
@@ -602,18 +582,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "flex justify-center" }, [
     _c(
-      "nav",
-      { staticClass: "px-8 flex items-center justify-center sm:px-0" },
+      "ul",
+      { staticClass: "flex space-x-2" },
       [
-        _c("div", { staticClass: "-mt-px w-0 flex-1 flex" }, [
+        _c("li", { class: { "text-gray-400": _vm.meta.current_page === 1 } }, [
           _c(
             "a",
             {
-              staticClass:
-                "border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700",
-              class: { "text-gray-300": _vm.meta.current_page === 1 },
               attrs: { href: "#" },
               on: {
                 click: function($event) {
@@ -622,171 +599,97 @@ var render = function() {
                 }
               }
             },
-            [
-              _c(
-                "svg",
-                {
-                  staticClass: "mr-3 h-5 w-5 text-gray-400",
-                  attrs: {
-                    "x-description": "Heroicon name: solid/arrow-narrow-left",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 20 20",
-                    fill: "currentColor",
-                    "aria-hidden": "true"
-                  }
-                },
-                [
-                  _c("path", {
-                    attrs: {
-                      "fill-rule": "evenodd",
-                      d:
-                        "M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z",
-                      "clip-rule": "evenodd"
-                    }
-                  })
-                ]
-              ),
-              _vm._v("\n                Previous\n            ")
-            ]
+            [_vm._v("<")]
           )
         ]),
         _vm._v(" "),
-        _c(
-          "ul",
-          { staticClass: "hidden md:-mt-px md:flex" },
-          [
-            _vm.section > 1
-              ? [
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "border-transparent text-gray-500  pt-4  px-4 inline-flex items-center text-sm font-medium",
-                        class: {
-                          "text-indigo-600": _vm.meta.current_page === _vm.page
-                        },
-                        attrs: { href: "#" },
-                        on: {
-                          click: function($event) {
-                            $event.preventDefault()
-                            return _vm.switched(1)
-                          }
-                        }
-                      },
-                      [_vm._v("1\n                ")]
-                    )
-                  ])
-                ]
-              : _vm._e(),
-            _vm._v(" "),
-            _vm._l(_vm.pages, function(page) {
-              return _c("div", [
+        _vm.section > 1
+          ? [
+              _c("li", [
                 _c(
                   "a",
                   {
-                    staticClass:
-                      "no-underline border-transparent text-gray-500  pt-4  px-4 inline-flex items-center text-sm font-medium",
-                    class: {
-                      "text-indigo-600": _vm.meta.current_page === page
-                    },
                     attrs: { href: "#" },
                     on: {
                       click: function($event) {
                         $event.preventDefault()
-                        return _vm.switched(page)
+                        return _vm.switched(1)
                       }
                     }
                   },
-                  [
-                    _vm._v(
-                      "\n                " + _vm._s(page) + "\n            "
-                    )
-                  ]
+                  [_vm._v("1")]
                 )
               ])
-            }),
-            _vm._v(" "),
-            _vm.section < _vm.sections
-              ? [
-                  _c("li", [
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "border-transparent text-gray-500  pt-4  px-4 inline-flex items-center text-sm font-medium",
-                        class: {
-                          "text-indigo-600": _vm.meta.current_page === _vm.page
-                        },
-                        attrs: { href: "#" },
-                        on: {
-                          click: function($event) {
-                            $event.preventDefault()
-                            return _vm.switched(_vm.meta.last_page)
-                          }
-                        }
-                      },
-                      [
-                        _vm._v(
-                          " " +
-                            _vm._s(_vm.meta.last_page) +
-                            "\n                "
-                        )
-                      ]
-                    )
-                  ])
-                ]
-              : _vm._e()
-          ],
-          2
-        ),
+            ]
+          : _vm._e(),
         _vm._v(" "),
-        _c("div", { staticClass: "-mt-px w-0 flex-1 flex justify-end" }, [
-          _c(
-            "a",
-            {
-              staticClass:
-                "border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700",
-              class: {
-                "text-gray-400": _vm.meta.current_page === _vm.meta.current_page
-              },
-              attrs: { href: "#" },
-              on: {
-                click: function($event) {
-                  $event.preventDefault()
-                  return _vm.switched(_vm.meta.current_page + 1)
-                }
-              }
-            },
+        _vm._l(_vm.pages, function(page) {
+          return _c(
+            "li",
+            { class: { "text-blue-500": _vm.meta.current_page === page } },
             [
-              _vm._v("\n            Next\n                "),
               _c(
-                "svg",
+                "a",
                 {
-                  staticClass: "ml-3 h-5 w-5 text-gray-400",
-                  attrs: {
-                    "x-description": "Heroicon name: solid/arrow-narrow-right",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 20 20",
-                    fill: "currentColor",
-                    "aria-hidden": "true"
+                  attrs: { href: "#" },
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.switched(page)
+                    }
                   }
                 },
-                [
-                  _c("path", {
-                    attrs: {
-                      "fill-rule": "evenodd",
-                      d:
-                        "M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z",
-                      "clip-rule": "evenodd"
-                    }
-                  })
-                ]
+                [_vm._v(_vm._s(page))]
               )
             ]
           )
-        ])
-      ]
+        }),
+        _vm._v(" "),
+        _vm.section < _vm.sections
+          ? [
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    attrs: { href: "#" },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.switched(_vm.meta.last_page)
+                      }
+                    }
+                  },
+                  [_vm._v(_vm._s(_vm.meta.last_page))]
+                )
+              ])
+            ]
+          : _vm._e(),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            class: {
+              "text-gray-400": _vm.meta.current_page === _vm.meta.current_page
+            }
+          },
+          [
+            _c(
+              "a",
+              {
+                attrs: { href: "#" },
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    return _vm.switched(_vm.meta.current_page + 1)
+                  }
+                }
+              },
+              [_vm._v(">")]
+            )
+          ]
+        )
+      ],
+      2
     )
   ])
 }
@@ -2176,7 +2079,7 @@ var render = function() {
             }
           ],
           staticClass:
-            "block w-full pl-10 pr-3 py-2 border-2 border-gray-300 rounded-xl leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-blue-400 focus:shadow-outline-blue sm:text-sm transition duration-150 ease-in-out",
+            "block w-full pl-10 pr-3 py-2 border-2 border-gray-300 rounded leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-blue-400 focus:shadow-outline-blue sm:text-sm transition duration-150 ease-in-out",
           attrs: {
             id: "search",
             autocomplete: "off",
@@ -2430,7 +2333,7 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _vm.meta.total > 10
+    _vm.meta.total > 25
       ? _c(
           "div",
           [
